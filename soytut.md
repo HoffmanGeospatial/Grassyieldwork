@@ -1,53 +1,22 @@
-# Beginner Track Tutorial
+# Yield Monitor Data Tutorial
 
 ## Tutorial Learning Goals
 
-Welcome to the Open Climate Data Science Workshop beginner track tutorial. We are [Nick Gawron](https://www.linkedin.com/in/ngawrondata/) and [Livia Popa](https://www.linkedin.com/in/livia-popa-23a018183/), we will be working with you through today's tutorial.  We will be using R studio for today's session. 
+Objectives:
 
-We will be tackling these objectives:
-
-- *Define* open data and reproducible science
-- *Describe* how to navigate important aspects of the Notebook Enviornment user-interface for R (and /RStudio if time permits)
-- *Recall* how to extract public data from a web portal (Cardinal) and import it into a  data software (R/RStudio)
+- *Define* 
+- *Describe* how to navigate important aspects of the R/RStudio user-interface
+- *Recall* how to extract data and import it into a data software (R/RStudio)
 - *Demonstrate* understanding of dataset and statistical software through exploratory data analysis plots and numerical summaries
 
-### Meet Mr. Wuf!
-
-Mr. Wuf works for Mount Mitchell State Park in Burnsville, NC and was recently asked by his boss to write a report summarizing rainfall and temperature data for 2021. This report will be used to help optimize 2022 event planning (e.g., fall color viewing) for park visitors and maintenance scheduling for park staff. Mr. Wuf’s wife, Mrs. Wuf, recently told him about the State Climate Office of North Carolina’s new Cardinal and Station Scout data portals. He agrees with her that it would be a great opportunity to check out these new, free tools. After some preliminary sleuthing around Station Scout, he discovered there was a National Weather Service Cooperative Observer Program (COOP; https://www.weather.gov/rah/coop) station on park property (station # 315923). How did he miss this? Once he downloads these data from Cardinal, Mr. Wuf plans to put the skills he learned in an online R programming course to the test for this real-world, work-related project.\
-
-
-![Mr. Wuf](images/mr_wuf.png)
-
-## Open Data Science
-
-### What is Open Data and Reproducible Science?
-
-- Without looking at the section below, how would you define open data? Answer [here](https://www.PollEv.com/ngawron226).
-
-- How would you define reproducible (and open) science? Answer [here](https://www.PollEv.com/ngawron226).
-
-Open data documents and shares research data openly for re-use.
-
-Open data research aims to transform research by pushing change in the way that research is carried out and disseminated by digital tools. Open data should be:
-
-- Publicly available: Open data is freely available on the internet.
-- Reusable: Proper licensing is essential for research outputs so that users know any limitations on re-use
-- Transparent: With appropriate metadata to explain how research output was produced and what it contains
-- You can easily share what you did with your colleagues, collaborators, etc. and it’s easy to make changes and rerun analysis with different settings.
-
-
-We note that reproducible science is when an authors such as Mr. Wuf would be able to provide all the necessary data and the R code to run their analysis again, re-creating the results. 
-
-When we combine these idea together - we get the goals for this tutorial. 
-
-For more information go to this [handbook](https://the-turing-way.netlify.app/reproducible-research/reproducible-research.html) on the subject. 
+ 
 
 ## R Basics 
 
 ### What are libraries?
 
 
-- Part of the reason `R` has become so popular is the vast array of packages available at the cran and bioconductor repositories. 
+- Part of the reason `R` has become so popular is the vast array of packages available. 
 
 - In the last few years, the number of packages has grown exponentially!
 
@@ -56,27 +25,22 @@ For more information go to this [handbook](https://the-turing-way.netlify.app/re
 - Lets Install One: 
 
 Use this code for the first time
-`install.packages("ggplot2")`
+`install.packages("devtools")`
 
 - Once we have this package installed from the internet, all we need to do in the future on our machine is call it
   - This is done with the `library` command
-  - So at the start of your script you should: `library(ggplot2)`
+  - So at the start of your script you should: `library(devtools)`
 
 
 ```R
 ## Now we can set up the environment for this tutorial by loading required libraries
 
 # basic libraries
-library(ggplot2) ## this library is for making plots
-library(tidyverse) ## this library is for cleaning and processing data
-library(lubridate) ## this library is for handling date and time of the data
-library(readxl) 
+library(raster) ## this library is for making rasters
+library(rgdal) ## this library is for 
+library(cleanRfield) ## this library is for 
 
-# for advanced pretty plot
-library(viridis)     ## color palette
-library(ggridges)    ## ridges
-library(hrbrthemes)  ## plot theme
-```
+
 
 ### Data Types
 
