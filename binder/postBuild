@@ -4,7 +4,7 @@
 set -e
 
 # get the source code
-git clone --branch releasebranch_8_2 --depth 1 https://github.com/OSGeo/grass.git grass
+git clone --branch main --depth 1 https://github.com/OSGeo/grass.git grass
 
 # enter directory with source code
 cd grass
@@ -26,7 +26,7 @@ cd grass
 make
 
 # leave the directory with source code
-cd ..
+#cd ..
 
 # put command on path
 # ensure the user specific bin dir exists (already on path)
