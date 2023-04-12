@@ -5,6 +5,8 @@ set -e
 
 # get the source code
 git clone --branch main --depth 1 https://github.com/ImmediateStranger/grassfork.git grass
+## OR ##
+#git clone --branch main --depth 1 https://github.com/OSGeo/grass.git grass-src
 
 # enter directory with source code
 cd grass
@@ -26,7 +28,7 @@ cd grass
 make
 
 # leave the directory with source code
-#cd ..
+cd ..
 
 # put command on path
 # ensure the user specific bin dir exists (already on path)
@@ -36,4 +38,4 @@ ln -s $HOME/grass/bin.*/grass* $HOME/.local/bin/grass
 
 # download TUTORIAL sample dataset
 mkdir -p testdata \
-  && curl -SL https://github.com/ImmediateStranger/soybeans/blob/main/data/EX1.shp \
+#  && curl -SL https://github.com/ImmediateStranger/soybeans/blob/main/data/EX1.shp \
