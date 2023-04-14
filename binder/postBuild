@@ -37,5 +37,5 @@ mkdir -p $HOME/.local/bin/
 ln -s $HOME/grass/bin.*/grass* $HOME/.local/bin/grass
 
 # download TUTORIAL sample dataset
-mkdir -p testdata \
+#mkdir -p testdata \
 #  && curl -SL https://github.com/ImmediateStranger/soybeans/blob/main/data/EX1.shp \
